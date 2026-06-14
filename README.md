@@ -23,8 +23,6 @@ Una web app stile Netflix costruita con React che permette di:
 
 ---
 
-## ✨ Features
-
 ### 🔎 Search film
 Ricerca film tramite API TMDB con query dinamica.
 
@@ -52,7 +50,3 @@ Apertura trailer in overlay con fallback se non disponibile.
 
 ---
 
-## 🔐 Environment Variables
-
-Crea un file `.env`:
-# Screen-room
