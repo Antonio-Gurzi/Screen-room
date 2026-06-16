@@ -48,15 +48,15 @@ function Navbar() {
       </Link>
 
       {/* SEARCH */}
-<form
-  onSubmit={handleSearch}
-  className="flex items-center w-full md:w-auto"
->
-  <input
-    name="search"
-    type="text"
-    placeholder="Cerca un film..."
-    className="
+      <form
+        onSubmit={handleSearch}
+        className="flex items-center w-full md:w-auto"
+      >
+        <input
+          name="search"
+          type="text"
+          placeholder="Cerca un film..."
+          className="
       w-full md:w-64
       bg-zinc-800 text-white
       px-3 py-1.5
@@ -65,8 +65,8 @@ function Navbar() {
       focus:ring-2 focus:ring-blue-600
       text-sm md:text-base
     "
-  />
-</form>
+        />
+      </form>
 
       {/* GENRES SELECT */}
       <select
