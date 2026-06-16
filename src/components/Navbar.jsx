@@ -27,31 +27,58 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="flex items-center justify-between px-6 py-4 bg-zinc-950 text-gray-100 border-b border-white/10">
+    <div
+      className="
+  flex flex-col md:flex-row
+  md:items-center md:justify-between
+  gap-4
+  px-6 py-4
+  bg-zinc-950 text-gray-100
+  border-b border-white/10
+"
+    >
       {/* LOGO */}
       <Link to="/">
-        <h1 className="text-2xl font-bold tracking-wide">
-          <span className="text-blue-600">Screen</span>
-          <span className="text-gray-400">Room</span>
-        </h1>
+        <div className="flex items-center gap-2">
+          <h1 className="text-2xl font-bold">
+            <span className="text-blue-600">Screen</span>
+            <span className="text-gray-400">Room</span>
+          </h1>
+        </div>
       </Link>
 
       {/* SEARCH */}
-      <form onSubmit={handleSearch} className="flex items-center">
-        <input
-          name="search"
-          type="text"
-          placeholder="Cerca un film..."
-          className="bg-zinc-800 text-white px-3 py-1.5 rounded-md outline-none focus:ring-2 focus:ring-blue-600"
-        />
-      </form>
+<form
+  onSubmit={handleSearch}
+  className="flex items-center w-full md:w-auto"
+>
+  <input
+    name="search"
+    type="text"
+    placeholder="Cerca un film..."
+    className="
+      w-full md:w-64
+      bg-zinc-800 text-white
+      px-3 py-1.5
+      rounded-md
+      outline-none
+      focus:ring-2 focus:ring-blue-600
+      text-sm md:text-base
+    "
+  />
+</form>
 
       {/* GENRES SELECT */}
       <select
-        className="bg-zinc-800 text-white px-3 py-1.5 rounded-md text-sm"
+        className="
+    w-full md:w-auto
+    bg-zinc-800 text-white
+    px-3 py-1.5
+    rounded-md text-sm
+  "
         onChange={(e) => {
           const genreId = e.target.value;
-          // se seleziona tutti i generi mi riporta nella home
+
           if (!genreId) {
             navigate("/");
             return;
