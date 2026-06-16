@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import MovieGrid from "../components/MovieGrid";
 
 function GenrePage() {
   const { id } = useParams();
@@ -51,36 +52,7 @@ function GenrePage() {
       </h1>
 
       {/* ================= GRID FILM ================= */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-        {movies.map((movie) => (
-          <div key={movie.id} className="group cursor-pointer">
-            {/* LINK DETTAGLIO FILM */}
-            <Link to={`/movie/${movie.id}`}>
-              {/* POSTER */}
-              <img
-                src={
-                  movie.poster_path
-                    ? `https://image.tmdb.org/t/p/w300${movie.poster_path}`
-                    : "https://via.placeholder.com/300x450?text=No+Image"
-                }
-                alt={movie.title}
-                className="
-                  rounded-lg
-                  transition
-                  duration-300
-                  group-hover:scale-105
-                "
-                loading="lazy"
-              />
-
-              {/* TITOLO */}
-              <p className="text-sm mt-2 text-gray-300 group-hover:text-white transition">
-                {movie.title}
-              </p>
-            </Link>
-          </div>
-        ))}
-      </div>
+      <MovieGrid movies={movies} />
     </div>
   );
 }

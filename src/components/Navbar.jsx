@@ -13,6 +13,7 @@ function Navbar() {
     if (!query.trim()) return;
 
     navigate(`/search?query=${query}`);
+    e.target.reset();
   };
 
   // GENRES STATE
