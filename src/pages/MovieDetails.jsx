@@ -77,8 +77,7 @@ function MovieDetail() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white">
-      <Navbar />
+    <>
       {/* ================= HERO ================= */}
       <div className="relative h-[60vh]">
         <div
@@ -189,7 +188,7 @@ function MovieDetail() {
         {/* SIMILI */}
         <SimilarMovies movies={similar} />
       </div>
-    </div>
+    </>
   );
 }
 

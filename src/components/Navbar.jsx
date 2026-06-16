@@ -51,8 +51,11 @@ function Navbar() {
         className="bg-zinc-800 text-white px-3 py-1.5 rounded-md text-sm"
         onChange={(e) => {
           const genreId = e.target.value;
-
-          if (!genreId) return;
+          // se seleziona tutti i generi mi riporta nella home
+          if (!genreId) {
+            navigate("/");
+            return;
+          }
 
           navigate(`/genre/${genreId}`);
         }}

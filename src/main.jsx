@@ -1,22 +1,25 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.jsx";
-import { BrowserRouter , Routes , Route} from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import MovieDetail from "./pages/MovieDetails.jsx";
-import SearchPage from "./pages/SearchPage.jsx";
-import GenrePage from "./pages/GenrePage.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import "./index.css";
+
+import MainLayout from "./components/MainLayout";
+import Home from "./pages/Home";
+import MovieDetail from "./pages/MovieDetails";
+import SearchPage from "./pages/SearchPage";
+import GenrePage from "./pages/GenrePage";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/movie/:id" element={<MovieDetail />} />
-        <Route path="/search" element={<SearchPage />} />
-        <Route path="/genre/:id" element={<GenrePage />} />
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/movie/:id" element={<MovieDetail />} />
+          <Route path="/genre/:id" element={<GenrePage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </StrictMode>,

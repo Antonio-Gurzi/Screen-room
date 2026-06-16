@@ -42,8 +42,7 @@ function SearchPage() {
   }, [query]);
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white px-6 py-10">
-      <Navbar />
+    <div className="px-6 py-10">
       {/* ================= HEADER ================= */}
       <h1 className="text-4xl font-bold mb-8 text-center">
         Risultati per: <span className="text-blue-500">{query || "..."}</span>

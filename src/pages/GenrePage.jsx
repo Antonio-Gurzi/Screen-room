@@ -43,7 +43,7 @@ function GenrePage() {
   }, [genres, id]);
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white px-6 py-10">
+    <div className="px-6 py-10">
       {/* ================= TITLE ================= */}
       <h1 className="text-3xl font-bold mb-8">
         Film per genere:{" "}
