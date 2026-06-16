@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { requests } from "../services/tmdb";
 import { Link } from "react-router-dom";
+import HeroSkeleton from "../skeletonComponents/HeroSkeleton";
 
 function Hero() {
   const [movie, setMovie] = useState(null);
@@ -70,9 +71,7 @@ function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  if (!movie) return null;
-
-  return (
+  return movie ? (
     <header className="relative h-[60vh] flex items-end p-10 text-white overflow-hidden">
       {/* BACKGROUND */}
       <div
@@ -170,6 +169,8 @@ function Hero() {
         </div>
       </div>
     </header>
+  ) : (
+    <HeroSkeleton />
   );
 }
 

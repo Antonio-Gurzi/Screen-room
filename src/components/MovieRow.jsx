@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import MovieCard from "./MovieCard";
+import MovieCardSkeleton from "../skeletonComponents/MovieCardSkeleton";
 
 function MovieRow({ title, movies }) {
   const rowRef = useRef(null);
@@ -51,9 +52,11 @@ function MovieRow({ title, movies }) {
           py-3
         "
       >
-        {movies?.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
-        ))}
+        {movies?.length > 0
+          ? movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)
+          : Array(6)
+              .fill(0)
+              .map((_, i) => <MovieCardSkeleton key={i} />)}
       </div>
 
       {/* FRECCIA DESTRA */}
