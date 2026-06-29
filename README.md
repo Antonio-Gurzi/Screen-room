@@ -1,58 +1,64 @@
-# 🎬 ScreenRoom – Netflix Clone (React + TMDB API)
+# 🎬 ScreenRoom
 
-Una web app stile Netflix costruita con React che permette di:
-
-- cercare film
-- filtrare per generi
-- visualizzare dettagli film
-- vedere cast, film simili e trailer YouTube
-- navigazione SPA con React Router
+ScreenRoom è una web app costruita con React che permette di esplorare film utilizzando le API di The Movie Database (TMDB).  
+L’interfaccia è ispirata alle piattaforme più famose di streaming con sezioni dinamiche, ricerca e visualizzazione per generi.
 
 ---
 
 ## 🚀 Demo
 
-## https://screen-room-sooty.vercel.app/
+👉 https://screen-room-sooty.vercel.app/
 
-## ⚙️ Tech Stack
+---
+
+## ⚙️ Tecnologie utilizzate
 
 - React
 - React Router DOM
 - Tailwind CSS
-- TMDB API
 - Vite
+- TMDB API
+- Fetch API
+- Vercel (deploy)
 
 ---
 
-### 🔎 Search film
+## 📌 Funzionalità principali
 
-Ricerca film tramite API TMDB con query dinamica.
+### 🎥 Home dinamica
+- Hero con film casuale trending
+- Sezioni:
+  - Trending
+  - Popolari
+  - Top Rated
+- Scroll orizzontale
+
+---
+
+### 🔎 Ricerca film
+- Search bar con query dinamica
+- Pagina risultati dedicata
+- Link diretto al dettaglio film
+
+---
 
 ### 🎭 Filtri per genere
-
-Navigazione per generi con pagina dedicata `/genre/:id`.
-
-### 🎬 Movie Details
-
-Pagina dettagli con:
-
-- overview
-- rating
-- release date
-- durata
-- cast
-- film simili
-- trailer YouTube
-
-### 🎥 Trailer Modal
-
-Apertura trailer in overlay con fallback se non disponibile.
-
-### 🧩 Componenti riutilizzabili
-
-- MovieCard
-- MovieRow
-- CastList
-- SimilarMovies
+- Lista generi da API TMDB
+- Pagina dedicata per ogni genere
+- Routing dinamico 
 
 ---
+
+### 🎬 Dettaglio film
+- Pagina dedicata
+- Informazioni complete del film
+- Trailer YouTube integrato (se disponibile)
+
+---
+
+### ⚡ UI/UX
+- Skeleton loading per miglior esperienza utente
+- Hover effects sulle card
+- Layout responsive mobile-first
+- Design ispirato a Netflix
+
